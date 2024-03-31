@@ -1,4 +1,27 @@
-# RISC Zero Rust Starter Template
+# risc0_zk_test
+
+Simple risc0 demo program which simulates processing a file (by base64 encoding it for example) and then generates a proof for the process's input and output hashes. This allows anyone to verify that the an output file with a given hash was generated from an input file with a given hash.
+
+```
+cargo build --release
+```
+
+```
+$ ./target/release/host prove input_file receipt.dat
+Created proof in 19.527785042s
+Input hash:  3e28f94ab30f1164f3b117e59dc10c9e079743234dad420bc7c26f4d79740f49
+Output hash: 68641ba0c84c52fff788a3c00a5b82acd194405546722444b43cd726d2a1dd8f
+Receipt written to receipt.dat
+```
+
+```
+$ ./target/release/host verify receipt.dat
+Verified receipt.
+Input hash:  3e28f94ab30f1164f3b117e59dc10c9e079743234dad420bc7c26f4d79740f49
+Output hash: 68641ba0c84c52fff788a3c00a5b82acd194405546722444b43cd726d2a1dd8f
+```
+
+---
 
 Welcome to the RISC Zero Rust Starter Template! This template is intended to
 give you a starting point for building a project using the RISC Zero zkVM.
