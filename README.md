@@ -3,7 +3,14 @@
 Simple risc0 demo program which simulates processing a file (by base64 encoding it for example) and then generates a proof for the process's input and output SHA-256 hashes. This allows anyone to verify that the an output file with a given hash was generated from an input file with a given hash.
 
 ```
+# Regular build
 cargo build --release
+
+# MacOS build with Metal
+cargo build --release -F risc0-zkvm/metal
+
+# Build with CUDA acceleration
+cargo build --release -F risc0-zkvm/cuda
 ```
 
 ```
