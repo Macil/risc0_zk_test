@@ -36,6 +36,7 @@ fn main() {
 
         let output_buf_chunk = &output_buf[0..bytes_written];
 
+        // Print the base64 encoded chunk
         // env::write_slice(&output_buf_chunk);
 
         output_hasher.update(&output_buf_chunk);
@@ -45,6 +46,7 @@ fn main() {
         }
     }
 
+    // Print a newline after printing all the base64 chunks
     // env::write_slice(&['\n' as u8]);
 
     // write public output to the journal

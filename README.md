@@ -1,6 +1,6 @@
 # risc0_zk_test
 
-Simple risc0 demo program which simulates processing a file (by base64 encoding it for example) and then generates a proof for the process's input and output hashes. This allows anyone to verify that the an output file with a given hash was generated from an input file with a given hash.
+Simple risc0 demo program which simulates processing a file (by base64 encoding it for example) and then generates a proof for the process's input and output SHA-256 hashes. This allows anyone to verify that the an output file with a given hash was generated from an input file with a given hash.
 
 ```
 cargo build --release
